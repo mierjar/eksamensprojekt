@@ -2,9 +2,9 @@
     import Cards from "./Cards.svelte";
     export let savedCards
 
+  
     
-    
-    fetch("https://tarot-api.onrender.com/api/v1/cards/random?n=3")
+    fetch("./assets/tarot-images.json")
     .then( res => res.json())
     .then(json => {
       console.log(json)
@@ -14,7 +14,7 @@
     .catch(function (error) {
       // handle what went wrong
       console.log(error)
-      });
+    });
        
 </script>
 
