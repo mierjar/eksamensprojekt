@@ -53,7 +53,7 @@
 	:global(.page){
 		display:grid;
 		place-items:center;
-		height: 70vh;
+		height: 75vh;
 	}
 	header{
 		display:grid;
@@ -69,6 +69,7 @@
 		height: 5.5rem;
 		width: 100vw;
 		bottom: 0;
+		z-index: -1;
 	}
 	img{
 		width: 100vw;
