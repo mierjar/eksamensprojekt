@@ -4,15 +4,15 @@
 </script>
 
 <main>
-    <Modal wrapper={false} big={true} button={false}>
-        <Content>
-            <h1>{c.name}</h1>
-            <h5>{c.fortune_telling}</h5>
-        </Content> 
-        <Trigger>
-            <img src="./assets/cards/{c.img}" alt="">
-        </Trigger>
-    </Modal>
+        <Modal basic big={true}>
+            <Content>
+                <h1>{c.name}</h1>
+                <h5>{c.fortune_telling}</h5>
+            </Content> 
+            <Trigger>
+                <img src="./assets/cards/{c.img}" alt="">
+            </Trigger>
+        </Modal>
 </main>
 
 <style>
@@ -23,4 +23,9 @@
     img{
         height: 10rem;
     }
+
+    .modal-backdrop {
+   background-color: yellow;
+}
+
 </style>

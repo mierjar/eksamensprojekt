@@ -5,8 +5,21 @@
 	import Collection from './components/Collection.svelte'
 	import Notes from './components/Notes.svelte';
 	let menu = ['Frontpage', 'Card Dealing', 'Notes', 'Collection']
-	let activePage = menu[0]
+	let activePage = menu[1]
 	let savedCards = []
+	let cardStock
+
+	fetch("./assets/tarot-images.json")
+    .then( res => res.json())
+    .then(json => {
+      console.log(json)
+      if(json.cards) cardStock = json.cards      
+    })
+    .catch(function (error) {
+      // handle what went wrong
+      console.log(error)
+    });
+
 </script>
 
 <header>
@@ -18,7 +31,7 @@
 	{#if activePage == menu[0]}
 	<Frontpage bind:activePage={activePage}/>
 	{:else if  activePage == menu[1]}
-	<CardDealing bind:savedCards={savedCards}/>
+	<CardDealing bind:savedCards={savedCards} {cardStock}/>
 	{:else if  activePage == menu[2]}
 	<Notes bind:savedCards={savedCards}/>
 	{:else if activePage == menu[3]}
