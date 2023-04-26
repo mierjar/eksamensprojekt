@@ -5,7 +5,7 @@
 	import Collection from './components/Collection.svelte'
 	import Notes from './components/Notes.svelte';
 	let menu = ['Frontpage', 'Card Dealing', 'Notes', 'Collection']
-	let activePage = menu[1]
+	let activePage = menu[0]
 	let savedCards = []
 	let cardStock
 
@@ -15,10 +15,7 @@
       console.log(json)
       if(json.cards) cardStock = json.cards      
     })
-    .catch(function (error) {
-      // handle what went wrong
-      console.log(error)
-    });
+    
 
 </script>
 
