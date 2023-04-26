@@ -5,7 +5,6 @@
 
 <main class='page'>
     
-    
     {#if savedCards.length > 0}
         <div class="cards">
             {#each savedCards as c}
@@ -22,8 +21,8 @@
 
 <style>
     main{
+        height:100%;
         overflow: scroll;
-        position: relative;
     }
     .cards{
         margin-top: 10rem;

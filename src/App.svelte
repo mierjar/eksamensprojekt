@@ -35,9 +35,10 @@
 	<Collection bind:savedCards={savedCards}/>
 	{/if}
 </main>
-	<footer>
-		<img src="https://cdn.discordapp.com/attachments/544280783448440837/1096972314052132924/crystal.png" alt="">
-	</footer>
+
+<footer>
+
+</footer>
 
 <style>
 	:global(*, body){
@@ -50,9 +51,9 @@
 	:global(.page){
 		display:grid;
 		place-items:center;
-		height: 75vh;
 	}
 	header{
+		position:fixed;
 		display:grid;
 		height:10vh;
 		width: 100%;
@@ -61,15 +62,21 @@
 		background:white;
 		color: black;
 	}
-	footer{
-		position: absolute;
-		height: 5.5rem;
-		width: 100vw;
-		bottom: 0;
-		z-index: -1;
+	main{
+		position:fixed;
+		height: 90vh;
+		width:100vw;
+		top:10vh;
 	}
-	img{
-		width: 100vw;
-		height: auto;
+	footer{
+		position:fixed;
+		bottom:0;
+		width:100vw;
+		height:15vh;
+		background-image: url(https://cdn.discordapp.com/attachments/544280783448440837/1096972314052132924/crystal.png);
+		background-position-y: bottom;
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index:5;
 	}
 </style>

@@ -10,26 +10,36 @@
   }
 
   const drawCards = () => {
-    for (let i = 0; i < 3; i++) {
-      let idx = Math.floor(Math.random() * cardStock.length);
-      newCards = [...newCards, (cardStock[idx])]
-      cardStock.splice(idx, 1);
+    newCards = []
+      if(cardStock.length >= 3){
+        for (let i = 0; i < 3; i++) {
+          let idx = Math.floor(Math.random() * cardStock.length);
+          newCards = [...newCards, (cardStock[idx])]
+          cardStock.splice(idx, 1);
+        }
+        console.log(newCards)
+      }else{
+        //vis fejlmeddelelse
+      }
     }
-    console.log(newCards)
-  }
      
 </script>
 
 <main class='page'>
-  <button on:click={drawCards}>Træk kort</button>
+  <div class="left">
+    <button on:click={drawCards}>Træk kort</button>
+    <button on:click={addCards}>Gem kort</button>
+  </div>
   <div class="kort">
     {#each newCards as c}
       <Cards {c} />
     {/each}
   </div>
-  <button on:click={addCards}>Gem kort</button>
 </main>
 
 <style>
-
+  main{
+    height:100%;
+    grid-template-columns: 1fr 1fr;
+  }
 </style>
