@@ -67,6 +67,7 @@
 		height: 90vh;
 		width:100vw;
 		top:10vh;
+		overflow-y: scroll;
 	}
 	footer{
 		position:fixed;

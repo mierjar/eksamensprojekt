@@ -21,11 +21,11 @@
 
 <style>
     main{
-        height:100%;
-        overflow: scroll;
+        
+        overflow-y: scroll;
     }
     .cards{
-        margin-top: 10rem;
+        margin-top: 10vh;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         justify-content: center;
