@@ -3,8 +3,7 @@
 	import Frontpage from './components/Frontpage.svelte'
 	import CardDealing from './components/CardDealing.svelte'
 	import Collection from './components/Collection.svelte'
-	import Notes from './components/Notes.svelte';
-	let menu = ['Frontpage', 'Card Dealing', 'Notes', 'Collection']
+	let menu = ['Frontpage', 'Card Dealing', 'Collection']
 	let activePage = menu[0]
 	let savedCards = []
 	let cardStock
@@ -29,9 +28,7 @@
 	<Frontpage bind:activePage={activePage}/>
 	{:else if  activePage == menu[1]}
 	<CardDealing bind:savedCards={savedCards} {cardStock}/>
-	{:else if  activePage == menu[2]}
-	<Notes bind:savedCards={savedCards}/>
-	{:else if activePage == menu[3]}
+	{:else if activePage == menu[2]}
 	<Collection bind:savedCards={savedCards}/>
 	{/if}
 </main>
